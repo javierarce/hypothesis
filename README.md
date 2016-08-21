@@ -1,4 +1,4 @@
-Unofficial `hypothesis` ruby gem.
+Unofficial [hypothesis](https://hypothes.is) ruby gem.
 
 ### Installation
 
