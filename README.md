@@ -13,7 +13,7 @@ require 'rubygems'
 require 'hypothesis'
 
 hypothesis = Hypothesis::API.new('YOUR_HYPOTHESIS_API_KEY')
-puts hypothesis.search({ user: 'javier', limit: 10 })
+puts hypothesis.search({ user: 'USERNAME', limit: 10 })
 
 ```
 
@@ -21,18 +21,18 @@ That will output an object with the found items. Here's how you to print the tit
 
 ```ruby
 hypothesis = Hypothesis::API.new('YOUR_HYPOTHESIS_API_KEY')
-results = hypothesis.search(user: 'javier', limit: 10)
+results = hypothesis.search(user: 'USERNAME', limit: 10)
 
 results.rows.each do |row|
   puts row.document.title
   puts row.uri
-  puts row.text
+  puts row.text unless row.text.nil?
 
   row.target.each do |target|
-    puts target.selector[target.selector.length - 1].exact
+    puts target.selector[target.selector.length - 1].exact unless target.selector.nil?
   end
 
-  puts "\n\n"
+  puts "\n"
 end
 ```
 
