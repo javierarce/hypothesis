@@ -6,6 +6,13 @@ module Hypothesis
   class << self
     attr_accessor :log
     attr_accessor :debug
+
+    # Public: An alias for Hypothesis::API.new
+    #
+    # Returns a Hypothesis::API object
+    def new(options = {})
+      Hypothesis::API.new(options)
+    end
   end
 
   self.log = false
