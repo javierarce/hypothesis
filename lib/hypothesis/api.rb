@@ -1,5 +1,7 @@
 require 'logger'
 require 'httparty'
+require 'json'
+require 'ostruct'
 
 module Hypothesis
   class API
@@ -33,7 +35,8 @@ module Hypothesis
 
     def get(url, options = {})
       header = @api_key ? { 'Authorization' => 'Bearer ' + @api_key } : {}
-      HTTParty.get(url, query: options, headers: header).parsed_response
+      results = HTTParty.get(url, query: options, headers: header)
+      JSON.parse(results.to_json, object_class: OpenStruct)
     end
 
     def log(msg)
