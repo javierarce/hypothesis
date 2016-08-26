@@ -17,7 +17,9 @@ puts hypothesis.search({ user: 'USERNAME', limit: 10 })
 
 ```
 
-That will output an object with the found items. Here's how you to print the title, URL, text and highlighted content:
+That will output an object with the found items. 
+
+Here's how you to print the title, URL, text and highlighted content:
 
 ```ruby
 hypothesis = Hypothesis::API.new('YOUR_HYPOTHESIS_API_KEY')
@@ -43,6 +45,5 @@ Currently this gem only supports the `root`, `search`, and `read` endpoints.
 [The Hypothesis API](https://h.readthedocs.io/en/latest/api/)
 
 ### License
-
 
 This work is licensed under the [MIT License (MIT)](LICENSE) and it is not associated with [TinyLetter](https://www.tinyletter.com) in any way.
