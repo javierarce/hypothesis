@@ -46,4 +46,4 @@ Currently this gem only supports the `root`, `search`, and `read` endpoints.
 
 ### License
 
-This work is licensed under the [MIT License (MIT)](LICENSE) and it is not associated with [TinyLetter](https://www.tinyletter.com) in any way.
+This work is licensed under the [MIT License (MIT)](LICENSE) and it is not associated with [Hypothes.is](https://hypothes.is) in any way.
