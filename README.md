@@ -19,7 +19,7 @@ puts hypothesis.search({ user: 'USERNAME', limit: 10 })
 
 That will output an object with the found items. 
 
-Here's how you to print the title, URL, text and highlighted content:
+Here's how you can print the title, URL, text and highlighted content:
 
 ```ruby
 hypothesis = Hypothesis::API.new('YOUR_HYPOTHESIS_API_KEY')
